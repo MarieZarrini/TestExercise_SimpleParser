@@ -36,8 +36,9 @@ namespace SimpleParser.Tests.Unit
 			var seperator = ", ";
 
 			var result = Parser.Parse(input, seperator);
+			bool isStringArray = result is string[];
 
-			result.Should().BeOfType<string[]>();
+			Assert.True(isStringArray);
 		}
 	}
 }
